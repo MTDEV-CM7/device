@@ -39,10 +39,14 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_KERNEL):kernel
 
 PRODUCT_PACKAGES += \
-    camera.msm7k \
+    Gallery3d \
+    SpareParts \
+    LatinIME \
+    Mms \
     gps.triumph \
-    gralloc.msm7k \
     lights.triumph \
+    copybit.msm7k \
+    gralloc.msm7k \
     overlay.default \
     libOmxCore \
     libOmxVenc \
@@ -50,7 +54,7 @@ PRODUCT_PACKAGES += \
 
 # Camera
 PRODUCT_PACKAGES += \
-    
+    camera.msm7k
 
 # Init files
 PRODUCT_COPY_FILES += \
@@ -208,6 +212,9 @@ PRODUCT_COPY_FILES += \
     device/motorola/triumph/system/lib/libcommondefs.so:/obj/lib/libcommondefs.so \
     device/motorola/triumph/system/lib/libcommondefs.so:/system/lib/libcommondefs.so \
     device/motorola/triumph/system/lib/libgemini.so:/system/lib/libgemini.so \
+    device/motorola/triumph/system/lib/libmm-adspsvc.so:/system/lib/libmm-adspsvc.so \
+    device/motorola/triumph/system/lib/libmm-omxcore.so:/system/lib/libmm-omxcore.so \
+    device/motorola/triumph/system/lib/libmmgsdilib.so:/system/lib/libgemini.so \
     device/motorola/triumph/system/lib/libOmxAacDec.so:/system/lib/libOmxAacDec.so \
     device/motorola/triumph/system/lib/libomx_aacdec_sharedlibrary.so:/system/lib/libomx_aacdec_sharedlibrary.so \
     device/motorola/triumph/system/lib/libOmxAacEnc.so:/system/lib/libOmxAacEnc.so \
@@ -230,18 +237,17 @@ PRODUCT_COPY_FILES += \
     device/motorola/triumph/system/lib/libomx_sharedlibrary.so:/system/lib/libomx_sharedlibrary.so \
     device/motorola/triumph/system/lib/libOmxVdec.so:/system/lib/libOmxVdec.so \
     device/motorola/triumph/system/lib/libOmxVenc.so:/system/lib/libOmxVenc.so \
-    device/motorola/triumph/system/lib/libOmxWmaDec.so:/system/lib/libOmxWmaDec.so \
-    device/motorola/triumph/system/lib/libgemini.so:/system/lib/libgemini.so \
-    device/motorola/triumph/system/lib/libgemini.so:/system/lib/libgemini.so \
-    device/motorola/triumph/system/lib/libmm-adspsvc.so:/system/lib/libmm-adspsvc.so \
-    device/motorola/triumph/system/lib/libmm-omxcore.so:/system/lib/libmm-omxcore.so \
+    device/motorola/triumph/system/lib/libOmxWmaDec.so:/system/lib/libOmxWmaDec.so
+
+#Media Firmware
+PRODUCT_COPY_FILES += \
     device/motorola/triumph/system/etc/firmware/vidc_720p_command_control.fw:/system/etc/firmware/vidc_720p_command_control.fw \
     device/motorola/triumph/system/etc/firmware/vidc_720p_h263_dec_mc.fw:/system/etc/firmware/vidc_720p_h263_dec_mc.fw \
     device/motorola/triumph/system/etc/firmware/vidc_720p_h264_dec_mc.fw:/system/etc/firmware/vidc_720p_h264_dec_mc.fw \
     device/motorola/triumph/system/etc/firmware/vidc_720p_h264_enc_mc.fw:/system/etc/firmware/vidc_720p_h264_enc_mc.fw \
     device/motorola/triumph/system/etc/firmware/vidc_720p_mp4_dec_mc.fw:/system/etc/firmware/vidc_720p_mp4_dec_mc.fw \
     device/motorola/triumph/system/etc/firmware/vidc_720p_mp4_enc_mc.fw:/system/etc/firmware/vidc_720p_mp4_enc_mc.fw \
-    device/motorola/triumph/system/etc/firmware/vidc_720p_vc1_dec_mc.fw:/system/etc/firmware/vidc_720p_vc1_dec_mc.fw \
+    device/motorola/triumph/system/etc/firmware/vidc_720p_vc1_dec_mc.fw:/system/etc/firmware/vidc_720p_vc1_dec_mc.fw
 
 # Modules
 PRODUCT_COPY_FILES += \
@@ -299,18 +305,13 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/motorola/triumph/system/usr/idc/bi041p.idc:/system/usr/idc/bi041p.idc
 
-#Video
+#Video Froyo Drivers
 PRODUCT_COPY_FILES += \
-    device/motorola/triumph/system/lib/egl/egl.cfg:/system/lib/egl/egl.cfg \
-    device/motorola/triumph/system/lib/egl/eglsubAndroid.so:/system/lib/egl/eglsubAndroid.so \
     device/motorola/triumph/system/lib/egl/libEGL_adreno200.so:/system/lib/egl/libEGL_adreno200.so \
-    device/motorola/triumph/system/lib/egl/libGLES_android.so:/system/lib/egl/libGLES_android.so \
     device/motorola/triumph/system/lib/egl/libGLESv1_CM_adreno200.so:/system/lib/egl/libGLESv1_CM_adreno200.so \
     device/motorola/triumph/system/lib/egl/libGLESv2_adreno200.so:/system/lib/egl/libGLESv2_adreno200.so \
     device/motorola/triumph/system/lib/egl/libq3dtools_adreno200.so:/system/lib/egl/libq3dtools_adreno200.so \
-    device/motorola/triumph/system/lib/libgsl.so:/system/lib/libgsl.so \
-    device/motorola/triumph/system/lib/libsc-a2xx.so:/system/lib/libsc-a2xx.so \
-    device/motorola/triumph/system/lib/libC2D2.so:/system/lib/libC2D2.so \
+    device/motorola/triumph/system/lib/libgsl.so:/system/lib/libgsl.so
 
 # Vold
 PRODUCT_COPY_FILES += \
