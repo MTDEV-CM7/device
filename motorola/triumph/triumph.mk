@@ -45,8 +45,8 @@ PRODUCT_PACKAGES += \
     Mms \
     gps.triumph \
     lights.triumph \
-    copybit.msm7k \
-    gralloc.msm7k \
+    copybit.msm7x30 \
+    gralloc.msm7x30 \
     overlay.default \
     libOmxCore \
     libOmxVenc \
@@ -54,7 +54,7 @@ PRODUCT_PACKAGES += \
 
 # Camera
 PRODUCT_PACKAGES += \
-    camera.msm7k
+    camera.msm7x30
 
 # Init files
 PRODUCT_COPY_FILES += \
