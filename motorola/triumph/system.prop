@@ -47,7 +47,7 @@ ro.telephony.gsm.spn.shortname=true
 ro.cdma.home.operator.numeric=311490
 
 wifi.interface=wlan0
-wifi.supplicant_scan_interval=90
+wifi.supplicant_scan_interval=180
 
 service.config.gsensor_cal=1
 libcamera.orientation=0
@@ -67,3 +67,9 @@ ro.telephony.call_ring.delay=1000
 wifi.wapi=0
 
 ro.tethering.kb_disconnect=1
+
+
+#Improve battery life
+pm.sleep_mode=1
+ro.ril.disable.power.collapse=1
+
