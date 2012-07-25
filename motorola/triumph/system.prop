@@ -89,4 +89,10 @@ debug.performance.tuning=1
 ro.max.fling_velocity=12000
 ro.min.fling_velocity=8000
 
-
+#Data
+ro.ril.def.agps.mode=2
+ro.ril.def.agps.feature=1
+ro.ril.enable.sdr=1
+ro.ril.enable.dtm=1
+ro.ril.fast.dormancy.rule=1
+ro.ril.fast.dormancy.timeout=3
