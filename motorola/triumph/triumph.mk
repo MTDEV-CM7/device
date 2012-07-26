@@ -370,3 +370,7 @@ PRODUCT_DEVICE := triumph
 PRODUCT_BRAND := Motorola
 PRODUCT_MODEL := MOTWX435KT
 PRODUCT_MANUFACTURER := Motorola
+
+# Adding boot sound play. Must be placed in /system/media/android_audio.mp3
+
+    ro.config.play.bootsound=1
