@@ -249,6 +249,21 @@ PRODUCT_COPY_FILES += \
     device/motorola/triumph/system/etc/firmware/vidc_720p_mp4_enc_mc.fw:system/etc/firmware/vidc_720p_mp4_enc_mc.fw \
     device/motorola/triumph/system/etc/firmware/vidc_720p_vc1_dec_mc.fw:system/etc/firmware/vidc_720p_vc1_dec_mc.fw
 
+#Media Opencore
+PRODUCT_COPY_FILES += \
+    device/motorola/triumph/system/etc/pvplayer.cfg:system/etc/pvplayer.cfg \
+    device/motorola/triumph/system/lib/libopencore_author.so:system/lib/libopencore_author.so \
+    device/motorola/triumph/system/lib/libopencore_common.so:system/lib/libopencore_common.so \
+    device/motorola/triumph/system/lib/libopencore_download.so:system/lib/libopencore_download.so \
+    device/motorola/triumph/system/lib/libopencore_downloadreg.so:system/lib/libopencore_downloadreg.so \
+    device/motorola/triumph/system/lib/libopencorehw.so:system/lib/libopencorehw.so \
+    device/motorola/triumph/system/lib/libopencore_mp4local.so:system/lib/libopencore_mp4local.so \
+    device/motorola/triumph/system/lib/libopencore_mp4localreg.so:system/lib/libopencore_mp4localreg.so \
+    device/motorola/triumph/system/lib/libopencore_net_support.so:system/lib/libopencore_net_support.so \
+    device/motorola/triumph/system/lib/libopencore_player.so:system/lib/libopencore_player.so \
+    device/motorola/triumph/system/lib/libopencore_rtsp.so:system/lib/libopencore_rtsp.so \
+    device/motorola/triumph/system/lib/libopencore_rtspreg.so:system/lib/libopencore_rtspreg.so 
+
 # Modules
 PRODUCT_COPY_FILES += \
     device/motorola/triumph/system/lib/modules/cifs.ko:system/lib/modules/cifs.ko
