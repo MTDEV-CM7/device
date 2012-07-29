@@ -27,7 +27,7 @@
 TARGET_SPECIFIC_HEADER_PATH := device/motorola/triumph/include
 
 TARGET_NO_BOOTLOADER := true
-TARGET_BOARD_PLATFORM := msm7x30
+TARGET_BOARD_PLATFORM := msm7k
 TARGET_BOARD_PLATFORM_GPU := qcom-adreno200
 
 TARGET_CPU_ABI := armeabi-v7a
