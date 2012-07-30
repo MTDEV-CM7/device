@@ -45,8 +45,8 @@ PRODUCT_PACKAGES += \
     Mms \
     gps.triumph \
     lights.triumph \
-    copybit.msm7k \
-    gralloc.msm7k \
+    copybit.msm7x30 \
+    gralloc.msm7x30 \
     overlay.default \
     libOmxCore \
     libOmxVenc \
@@ -77,10 +77,10 @@ PRODUCT_COPY_FILES += \
     frameworks/base/data/etc/android.hardware.sensor.accelerometer.xml:system/etc/permissions/android.hardware.sensor.accelerometer.xml \
     frameworks/base/data/etc/android.hardware.touchscreen.multitouch.xml:system/etc/permissions/android.hardware.touchscreen.multitouch.xml
 
-#######################################################
-# These are proprietary file for the Motorola Triumph #
-#                       START                         #
-#######################################################
+########################################################
+# These are proprietary files for the Motorola Triumph #
+#                       START                          #
+########################################################
 
 # Audio 
 PRODUCT_COPY_FILES += \
@@ -345,10 +345,10 @@ PRODUCT_COPY_FILES += \
     device/motorola/triumph/system/etc/firmware/wlan//qcom_cfg.ini:system/etc/firmware/wlan/qcom_cfg.ini \
     device/motorola/triumph/system/etc/wifi/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf
 
-#######################################################
-# These are proprietary file for the Motorola Triumph #
-#                       FINISH                        #
-#######################################################
+########################################################
+# These are proprietary files for the Motorola Triumph #
+#                       FINISH                         #
+########################################################
 
 # The OpenGL ES API level that is natively supported by this device.
 # This is a 16.16 fixed point number
