@@ -54,7 +54,7 @@ PRODUCT_PACKAGES += \
 
 # Camera
 PRODUCT_PACKAGES += \
-    camera.msm7k
+    camera.msm7x30
 
 # Init files
 PRODUCT_COPY_FILES += \
