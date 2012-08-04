@@ -156,7 +156,8 @@ PRODUCT_COPY_FILES += \
     device/motorola/triumph/system/etc/gps.conf:system/etc/gps.conf \
     device/motorola/triumph/system/etc/SuplRootCert:system/etc/SuplRootCert \
     device/motorola/triumph/system/etc/loc_parameter.ini:system/etc/loc_parameter.ini \
-    device/motorola/triumph/system/lib/libloc_api-rpc-qc.so:system/lib/libloc_api-rpc-qc.so
+    device/motorola/triumph/system/lib/libloc_api-rpc-qc.so:system/lib/libloc_api-rpc-qc.so \
+    device/motorola/triumph/system/lib/libgps.so:system/lib/libgps.so
 
 # Hostapd
 PRODUCT_COPY_FILES += \
