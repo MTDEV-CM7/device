@@ -256,10 +256,7 @@ service qcom-sh /system/bin/sh /init.qcom.sh
     oneshot
 
 service hdmid /system/bin/hdmid
-    #socket hdmid stream 0660 root system graphics
-    user system 
-    group system graphics 
-    socket hdmid stream 0660 system system 
+    socket hdmid stream 0660 root system graphics
     disabled
 
 on property:ro.hdmi.enable=true

@@ -24,6 +24,9 @@
 # variant, so that it gets overwritten by the parent (which goes
 # against the traditional rules of inheritance).
 
+# inherit from the proprietary version
+-include vendor/motorola/triumph/BoardConfigVendor.mk
+
 TARGET_SPECIFIC_HEADER_PATH := device/motorola/triumph/include
 
 TARGET_NO_BOOTLOADER := true
@@ -34,27 +37,28 @@ TARGET_CPU_ABI := armeabi-v7a
 TARGET_CPU_ABI2 := armeabi
 TARGET_ARCH_VARIANT := armv7-a-neon
 ARCH_ARM_HAVE_TLS_REGISTER := true
-TARGET_BOOTLOADER_BOARD_NAME := triumph
 
 TARGET_USES_2G_VM_SPLIT := true
 
 # Accelerometer
 TARGET_USES_OLD_LIBSENSORS_HAL := true
 
+# Set insecure for root access 
+ADDITIONAL_DEFAULT_PROPERTIES += ro.secure=0 
+
 # Audio
 BOARD_USES_GENERIC_AUDIO := false
 TARGET_PROVIDES_LIBAUDIO := true
 
-# Blue Tooth
+# Bluetooth
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_BCM := true
 
 # Camera
 BOARD_CAMERA_USE_GETBUFFERINFO := true
 BOARD_USE_CAF_LIBCAMERA := true
-USE_CAMERA-STUB := false
 
-# GPS 
+# GPS Defines
 BOARD_USES_QCOM_HARDWARE := true
 BOARD_USES_QCOM_LIBS := true
 BOARD_USES_QCOM_LIBRPC := true
@@ -68,25 +72,20 @@ BOARD_VENDOR_QCOM_GPS_NEEDS_LNA := true
 BOARD_VENDOR_QCOM_GPS_HAS_BROKEN_XTRA := true
 BOARD_VENDOR_QCOM_AMSS_VERSION := 1200
 
+# Graphics
+BOARD_EGL_CFG := device/motorola/triumph/egl.cfg
+BOARD_OVERLAY_FORMAT_YCbCr_420_SP := true
+BOARD_OVERLAY_MINIFICATION_LIMIT := 2
+BOARD_NO_RGBX_8888 := true
+
 # HDMI
-TARGET_HAVE_TSLIB := true
 TARGET_HAVE_HDMI_OUT := true
-BOARD_HDMI_USES_EDID := true
-BOARD_HDMI_STD := STD_1080P
-TARGET_HARDWARE_3D := false
 
 # USB
 BOARD_USE_USB_MASS_STORAGE_SWITCH := true
 BOARD_UMS_LUNFILE := "/sys/devices/platform/usb_mass_storage/lun0/file"
 
-# Video
-BOARD_EGL_CFG := device/motorola/triumph/system/lib/egl/egl.cfg
-BOARD_OVERLAY_FORMAT_YCbCr_420_SP := true
-BOARD_OVERLAY_MINIFICATION_LIMIT := 2
-BOARD_NO_RGBX_8888 := true
-TARGET_LIBAGL_USE_GRALLOC_COPYBITS := true
-
-# Wifi related defines
+# Wifi
 BOARD_WPA_SUPPLICANT_DRIVER := WEXT
 WPA_SUPPLICANT_VERSION := VER_0_6_X
 BOARD_WLAN_DEVICE := libra
@@ -101,16 +100,19 @@ BOARD_WEXT_NO_COMBO_SCAN := true
 #          DO NOT MAKE EDITS BELOW THIS AREA          #
 #######################################################
 
+# Releasetools
 TARGET_PROVIDES_RELEASETOOLS := true
 TARGET_RELEASETOOL_IMG_FROM_TARGET_SCRIPT := ./device/motorola/triumph/releasetools/triumph_img_from_target_files
 TARGET_RELEASETOOL_OTA_FROM_TARGET_SCRIPT := ./device/motorola/triumph/releasetools/triumph_ota_from_target_files
 
+# Recovery
 TARGET_PREBUILT_RECOVERY_KERNEL := device/motorola/triumph/recovery_kernel
 BOARD_HAS_LARGE_FILESYSTEM := true
 BOARD_USES_MMCUTILS := true
 BOARD_CUSTOM_RECOVERY_KEYMAPPING := ../../device/motorola/triumph/recovery/recovery_ui.c
 BOARD_CUSTOM_GRAPHICS := ../../../device/motorola/triumph/recovery/minui/graphics.c
 
+# Filesystem
 BOARD_SYSTEM_DEVICE := /dev/block/mmcblk0p7
 BOARD_SYSTEM_FILESYSTEM := ext4
 BOARD_DATA_DEVICE := /dev/block/mmcblk0p8
