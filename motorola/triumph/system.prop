@@ -76,18 +76,14 @@ ro.ril.fast.dormancy.rule=1
 ro.ril.fast.dormancy.timeout=3
 ro.mot.eri.losalert.delay=1000
 
-#Improve Media & Streaming
+#Improve Media 
 video.accelerate.hw=1 
 ro.media.enc.jpeg.quality=100
-net.tcp.buffersize.default=4096,87380,256960,4096,16384,256960
-net.tcp.buffersize.wifi=4096,87380,256960,4096,16384,256960
-net.tcp.buffersize.umts=4096,87380,256960,4096,16384,256960
-net.tcp.buffersize.edge=4096,87380,256960,4096,16384,256960
-net.tcp.buffersize.gprs=4096,87380,256960,4096,16384,256960
+
 
 #Improve UI
 persist.sys.ui.hw=1
-windowsmgr.max_events_per_sec=90
+windowsmgr.max_events_per_sec=150
 debug.performance.tuning=1
 ro.max.fling_velocity=12000
 ro.min.fling_velocity=8000
