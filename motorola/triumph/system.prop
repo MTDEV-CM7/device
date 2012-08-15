@@ -93,4 +93,5 @@ ro.ril.def.agps.mode=2
 ro.ril.def.agps.feature=1
 ro.ril.enable.sdr=1
 ro.ril.enable.dtm=1
+persist.data_netmgrd_mtu=1472
 
