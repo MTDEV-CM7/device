@@ -80,7 +80,6 @@ ro.mot.eri.losalert.delay=1000
 video.accelerate.hw=1 
 ro.media.enc.jpeg.quality=100
 
-
 #Improve UI
 persist.sys.ui.hw=1
 windowsmgr.max_events_per_sec=150
@@ -94,4 +93,9 @@ ro.ril.def.agps.feature=1
 ro.ril.enable.sdr=1
 ro.ril.enable.dtm=1
 persist.data_netmgrd_mtu=1472
+
+#Dalvik
+dalvik.vm.dexopt-data-only=1 
+dalvik.vm.heapstartsize=5m
+dalvik.vm.HOMEscreen-mode=smooth
 
