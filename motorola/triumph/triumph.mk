@@ -139,7 +139,7 @@ PRODUCT_COPY_FILES += \
 # GPS
 PRODUCT_COPY_FILES += \
     device/motorola/triumph/files/etc/gps.conf:system/etc/gps.conf \
-    device/motorola/triumph/prebuilt/lib/SuplRootCert:system/lib/SuplRootCert 
+    device/motorola/triumph/files/etc/SuplRootCert:system/etc/SuplRootCert 
 
 # APN
 PRODUCT_COPY_FILES += \
