@@ -196,8 +196,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Perfomance tweaks and misc
 PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.execution-mode=int:jit \
-    dalvik.vm.heapsize=32m \
-    persist.sys.use_dithering=1 \
+    dalvik.vm.heapsize=48m \
+    persist.sys.use_dithering=0 \
     ro.sf.lcd_density=240 \
     ro.compcache.default=0
 
