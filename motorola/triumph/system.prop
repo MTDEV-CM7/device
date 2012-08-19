@@ -97,5 +97,5 @@ persist.data_netmgrd_mtu=1472
 #Dalvik
 dalvik.vm.dexopt-data-only=1 
 dalvik.vm.heapstartsize=5m
-dalvik.vm.HOMEscreen-mode=smooth
+
 
