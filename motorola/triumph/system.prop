@@ -68,6 +68,7 @@ wifi.wapi=0
 
 ro.tethering.kb_disconnect=1
 
+mot.proximity.delay=50
 
 #battery 
 pm.sleep_mode=1
