@@ -134,7 +134,8 @@ PRODUCT_COPY_FILES += \
     device/motorola/triumph/prebuilt/lib/libaudioalsa.so:system/lib/libaudioalsa.so \
     device/motorola/triumph/prebuilt/lib/libaudioalsa.so:obj/lib/libaudioalsa.so \
     device/motorola/triumph/prebuilt/lib/liba2dp.so:system/lib/liba2dp.so \
-    device/motorola/triumph/prebuilt/lib/libaudioalsa.so:obj/lib/libaudioalsa.so
+    device/motorola/triumph/files/etc/firmware/yamato_pfp.fw:system/etc/firmware/yamato_pfp.fw \
+    device/motorola/triumph/files/etc/firmware/yamato_pm4.fw:system/etc/firmware/yamato_pm4.fw
 
 # GPS
 PRODUCT_COPY_FILES += \
@@ -164,9 +165,7 @@ PRODUCT_COPY_FILES += \
     device/motorola/triumph/prebuilt/lib/egl/libq3dtools_adreno200.so:system/lib/egl/libq3dtools_adreno200.so \
     device/motorola/triumph/prebuilt/lib/libgsl.so:system/lib/libgsl.so \
     device/motorola/triumph/prebuilt/lib/libsc-a2xx.so:system/lib/libsc-a2xx.so \
-    device/motorola/triumph/prebuilt/lib/libC2D2.so:system/lib/libC2D2.so \
-    device/motorola/triumph/files/etc/firmware/yamato_pfp.fw:system/etc/firmware/yamato_pfp.fw \
-    device/motorola/triumph/files/etc/firmware/yamato_pm4.fw:system/etc/firmware/yamato_pm4.fw
+    device/motorola/triumph/prebuilt/lib/libC2D2.so:system/lib/libC2D2.so 
 
 # Sensors
 #PRODUCT_COPY_FILES += \
