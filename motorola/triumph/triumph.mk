@@ -337,6 +337,7 @@ PRODUCT_COPY_FILES += \
     device/motorola/triumph/system/lib/modules/libra.ko:system/lib/modules/libra.ko \
     device/motorola/triumph/system/lib/modules/librasdioif.ko:system/lib/modules/librasdioif.ko \
     device/motorola/triumph/system/lib/modules/libra_ftm.ko:system/lib/modules/libra_ftm.ko \
+    device/motorola/triumph/system/lib/modules/tun.ko:system/lib/modules/tun.ko \
     device/motorola/triumph/system/etc/firmware/wlan//qcom_fw.bin:system/etc/firmware/wlan/qcom_fw.bin \
     device/motorola/triumph/system/etc/firmware/wlan//qcom_wapi_fw.bin:system/etc/firmware/wlan/qcom_wapi_fw.bin \
     device/motorola/triumph/system/etc/firmware/wlan//qcom_wlan_nv.bin:system/etc/firmware/wlan/qcom_wlan_nv.bin \
