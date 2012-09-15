@@ -73,7 +73,6 @@ mot.proximity.delay=50
 #battery 
 pm.sleep_mode=1
 ro.ril.disable.power.collapse=0
-ro.ril.fast.dormancy.rule=1
 ro.ril.fast.dormancy.timeout=3
 ro.mot.eri.losalert.delay=1000
 
@@ -83,20 +82,18 @@ ro.media.enc.jpeg.quality=100
 
 #Improve UI
 persist.sys.ui.hw=1
-windowsmgr.max_events_per_sec=150
+windowsmgr.max_events_per_sec=90
 debug.performance.tuning=1
 ro.max.fling_velocity=12000
 ro.min.fling_velocity=8000
 
 #Data
 ro.ril.def.agps.mode=2
-ro.ril.def.agps.feature=1
-ro.ril.enable.sdr=1
-ro.ril.enable.dtm=1
+
+
 
 
 #Dalvik
-dalvik.vm.dexopt-data-only=1 
 dalvik.vm.heapstartsize=5m
 
 
