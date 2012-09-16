@@ -335,6 +335,8 @@ def WriteFullOTAPackage(input_zip, output_zip):
   script.FormatPartition("/system")
   script.Mount("/system")
   script.UnpackPackageDir("system", "/system")
+  script.Mount("/data")
+  script.UnpackPackageDir("data", "/data")
 
   symlinks = CopySystemFiles(input_zip, output_zip)
   script.MakeSymlinks(symlinks)
