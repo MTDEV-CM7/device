@@ -73,8 +73,6 @@ mot.proximity.delay=50
 #battery 
 pm.sleep_mode=1
 ro.ril.disable.power.collapse=0
-ro.ril.fast.dormancy.timeout=3
-ro.mot.eri.losalert.delay=1000
 
 #Improve Media 
 video.accelerate.hw=1 
@@ -86,12 +84,6 @@ windowsmgr.max_events_per_sec=90
 debug.performance.tuning=1
 ro.max.fling_velocity=12000
 ro.min.fling_velocity=8000
-
-#Data
-ro.ril.def.agps.mode=2
-
-
-
 
 #Dalvik
 dalvik.vm.heapstartsize=5m
