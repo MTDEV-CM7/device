@@ -86,7 +86,6 @@ ro.max.fling_velocity=12000
 ro.min.fling_velocity=8000
 
 #Dalvik
-#Dalvik
 dalvik.vm.heapstartsize=7m
 dalvik.vm.verify-bytecode=false 
 ro.kernel.checkjni=0
