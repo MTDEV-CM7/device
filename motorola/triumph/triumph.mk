@@ -129,13 +129,6 @@ PRODUCT_COPY_FILES += \
     device/motorola/triumph/files/etc/firmware/wlan/hostapd_default.conf:system/etc/firmware/wlan/hostapd_default.conf \
     device/motorola/triumph/files/etc/init.d/08hostapd:system/etc/init.d/08hostapd
 
-# Audio 
-PRODUCT_COPY_FILES += \
-    device/motorola/triumph/prebuilt/lib/libaudioalsa.so:system/lib/libaudioalsa.so \
-    device/motorola/triumph/prebuilt/lib/libaudioalsa.so:obj/lib/libaudioalsa.so \
-    device/motorola/triumph/prebuilt/lib/liba2dp.so:system/lib/liba2dp.so \
-    device/motorola/triumph/files/etc/firmware/yamato_pfp.fw:system/etc/firmware/yamato_pfp.fw \
-    device/motorola/triumph/files/etc/firmware/yamato_pm4.fw:system/etc/firmware/yamato_pm4.fw
 
 # GPS
 PRODUCT_COPY_FILES += \
@@ -154,18 +147,6 @@ PRODUCT_COPY_FILES += \
     device/motorola/triumph/prebuilt/libmmjpeg.so:system/lib/libmmjpeg.so \
     device/motorola/triumph/prebuilt/libmmipl.so:system/lib/libmmipl.so
 
-# EGL/GPU
-#PRODUCT_COPY_FILES += \
-#    device/motorola/triumph/prebuilt/lib/egl/egl.cfg:system/lib/egl/egl.cfg \
-#    device/motorola/triumph/prebuilt/lib/egl/libGLES_android.so:system/lib/egl/libGLES_android.so \
-#    device/motorola/triumph/prebuilt/lib/egl/libEGL_adreno200.so:system/lib/egl/libEGL_adreno200.so \
-#    device/motorola/triumph/prebuilt/lib/egl/eglsubAndroid.so:system/lib/egl/eglsubAndroid.so \
-#    device/motorola/triumph/prebuilt/lib/egl/libGLESv1_CM_adreno200.so:system/lib/egl/libGLESv1_CM_adreno200.so \
-#    device/motorola/triumph/prebuilt/lib/egl/libGLESv2_adreno200.so:system/lib/egl/libGLESv2_adreno200.so \
-#    device/motorola/triumph/prebuilt/lib/egl/libq3dtools_adreno200.so:system/lib/egl/libq3dtools_adreno200.so \
-#    device/motorola/triumph/prebuilt/lib/libgsl.so:system/lib/libgsl.so \
-#    device/motorola/triumph/prebuilt/lib/libsc-a2xx.so:system/lib/libsc-a2xx.so \
-#    device/motorola/triumph/prebuilt/lib/libC2D2.so:system/lib/libC2D2.so 
 
 # Sensors
 #PRODUCT_COPY_FILES += \
