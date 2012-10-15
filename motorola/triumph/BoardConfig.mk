@@ -94,7 +94,8 @@ WIFI_DRIVER_MODULE_NAME := "libra"
 WIFI_SDIO_IF_DRIVER_MODULE_PATH := "/system/lib/modules/librasdioif.ko"
 WIFI_SDIO_IF_DRIVER_MODULE_NAME := "librasdioif"
 BOARD_WEXT_NO_COMBO_SCAN := true
-
+WIFI_PRE_LOADER := "qcom_sdio_init"
+WIFI_POST_UNLOADER := "qcom_sdio_deinit"
 #######################################################
 # These are specific settings to the Motorola Triumph #
 #          DO NOT MAKE EDITS BELOW THIS AREA          #
