@@ -64,7 +64,6 @@ PRODUCT_COPY_FILES += \
     device/motorola/triumph/files/etc/init.qcom.bt.sh:system/etc/init.qcom.bt.sh \
     device/motorola/triumph/files/etc/init.qcom.coex.sh:system/etc/init.qcom.coex.sh\
     device/motorola/triumph/files/etc/init.qcom.bt.sh:system/etc/init.qcom.fm.sh \
-    device/motorola/triumph/files/etc/init.qcom.sdio.sf6.sh:system/etc/init.qcom.sdio.sf6.sh \
     device/motorola/triumph/files/etc/init.qcom.sdio.sh:system/etc/init.qcom.sdio.sh \
     device/motorola/triumph/files/etc/init.qcom.wifi.sh:system/etc/init.qcom.wifi.sh \
     device/motorola/triumph/files/etc/init.apn.sh:system/etc/init.apn.sh \
@@ -143,9 +142,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/motorola/triumph/prebuilt/libcamera.so:system/lib/libcamera.so \
     device/motorola/triumph/prebuilt/libcamera.so:obj/lib/libcamera.so \
-    device/motorola/triumph/prebuilt/liboemcamera.so:system/lib/liboemcamera.so \
-    device/motorola/triumph/prebuilt/libmmjpeg.so:system/lib/libmmjpeg.so \
-    device/motorola/triumph/prebuilt/libmmipl.so:system/lib/libmmipl.so
+    device/motorola/triumph/prebuilt/liboemcamera.so:system/lib/liboemcamera.so 
+#    device/motorola/triumph/prebuilt/libmmjpeg.so:system/lib/libmmjpeg.so \
+#    device/motorola/triumph/prebuilt/libmmipl.so:system/lib/libmmipl.so
 
 
 # Sensors
