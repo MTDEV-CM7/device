@@ -85,8 +85,16 @@ ro.max.fling_velocity=12000
 ro.min.fling_velocity=8000
 
 #Dalvik
-dalvik.vm.heapstartsize=7m
-dalvik.vm.verify-bytecode=false 
-ro.kernel.checkjni=0
+dalvik.vm.heapstartsize=5m
+
+# system props for the MM modules
+#
+media.stagefright.enable-player=true
+media.stagefright.enable-meta=false
+media.stagefright.enable-scan=false
+media.stagefright.enable-http=true
+
+ro.bluetooth.remote.autoconnect=true
+ro.qualcomm.bluetooth.dun=true
 
 
