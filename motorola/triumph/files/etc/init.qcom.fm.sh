@@ -1,5 +1,5 @@
 #!/system/bin/sh
-# Copyright (c) 2009, Code Aurora Forum. All rights reserved.
+# Copyright (c) 2009-2011, Code Aurora Forum. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are met:
@@ -28,7 +28,8 @@
 
 setprop hw.fm.init 0
 
-wcmenable=`getprop hw.fm.wcm`
+mode=`getprop hw.fm.mode`
+version=`getprop hw.fm.version`
 
 LOG_TAG="qcom-fm"
 LOG_NAME="${0}:"
@@ -50,18 +51,23 @@ failed ()
 }
 
 logi "In FM shell Script"
-logi "wcmenable: $wcmenable"
+logi "mode: $mode"
 
-case $wcmenable in
-  "enable")
-     /system/bin/fm_qsoc_patches 1
+#$fm_qsoc_patches <fm_chipVersion> <enable/disable WCM>
+#
+case $mode in
+  "normal")
+     /system/bin/fm_qsoc_patches $version 0
      ;;
-  "disable")
-     /system/bin/fm_qsoc_patches 0
+  "wa_enable")
+   /system/bin/fm_qsoc_patches $version 1
+     ;;
+  "wa_disable")
+   /system/bin/fm_qsoc_patches $version 2
      ;;
    *)
     logi "Shell: Default case"
-    /system/bin/fm_qsoc_patches 1
+    /system/bin/fm_qsoc_patches $version 0
     ;;
 esac
 
@@ -70,20 +76,10 @@ exit_code_fm_qsoc_patches=$?
 case $exit_code_fm_qsoc_patches in
    0)
 	logi "FM QSoC calibration and firmware download succeeded"
-	case $wcmenable in
-	"enable")
-		setprop hw.fm.wcm disable
-	;;
-	"disable")
-		setprop hw.fm.wcm enable
-	;;
-	*)
-		setprop hw.fm.wcm disable
-	;;
-	esac
    ;;
   *)
 	failed "FM QSoC firmware download and/or calibration failed" $exit_code_fm_qsoc_patches
+   ;;
 esac
 
 setprop hw.fm.init 1

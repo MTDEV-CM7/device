@@ -38,6 +38,7 @@ target="msm7630_surf"
 case "$target" in
     "msm7627_surf")
         echo "$arg" > /sys/devices/platform/msm_sdcc.1/polling
+        echo "$arg" > /sys/devices/platform/msm_sdcc.2/polling
         ;;
 
     "msm7627_ffa")
@@ -56,8 +57,20 @@ case "$target" in
         echo "$arg" > /sys/devices/platform/msm_sdcc.3/polling
         ;;
 
+    "msm7630_1x")
+        echo "$arg" > /sys/devices/platform/msm_sdcc.3/polling
+        ;;
+
     "msm7630_fusion")
         echo "$arg" > /sys/devices/platform/msm_sdcc.3/polling
+        ;;
+
+    "msm8660_surf")
+        echo "$arg" > /sys/devices/platform/msm_sdcc.4/polling
+        ;;
+
+    "msm8660_csfb")
+        echo "$arg" > /sys/devices/platform/msm_sdcc.4/polling
         ;;
 esac
 
