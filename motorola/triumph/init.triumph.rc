@@ -475,7 +475,6 @@ on boot
     chown compass system /dev/ltr502als_alsps
     chmod 0777 /dev/ltr502als_alsps
 
-
 ###################################################################################
 
 # Define TCP buffer sizes for various networks
@@ -559,9 +558,21 @@ service gpsone_daemon /system/bin/gpsone_daemon
 #    oneshot
 
 
-service rmt_storage /system/bin/rmt_storage /dev/block/mmcblk0p14 /dev/block/mmcblk0p15
-   user root
-#  disabled
+service rmt_storage / system / bin / rmt_storage / dev/block/mmcblk0p10 / dev/block/mmcblk0p11
+     user root
+     disabled 
+
+# rmt_storage from Sharp 2.3.5 (Ware our file originates)
+#Div2-SW2-BSP,JOE HSU,change EFS partition
+#service rmt_storage /system/bin/rmt_storage /dev/block/mmcblk0p10 /dev/block/#mmcblk0p11 /dev/block/mmcblk0p17
+#service rmt_storage /system/bin/rmt_storage /dev/block/mmcblk0p13 /dev/block/#mmcblk0p14 /dev/block/mmcblk0p15
+#    user root
+#    disabled
+
+#Old rmt_storage
+#service rmt_storage /system/bin/rmt_storage /dev/block/mmcblk0p14 /dev/block/#mmcblk0p15
+#   user root
+#   disabled
 
 service qmuxd /system/bin/qmuxd
     user radio
@@ -837,8 +848,6 @@ on property:crypto.driver.load=0
      exec /system/bin/rmmod qcedev.ko
      exec /system/bin/rmmod qce.ko
 
-    setprop persist.thermal.monitor true
-
 on property:persist.thermal.monitor=true
     start thermald
 
@@ -882,6 +891,7 @@ on property:persist.service.adb.enable=1
 on property:persist.service.adb.enable=0
     stop adbd
 
+
 on property:init.svc.wpa_supplicant=stopped
     stop dhcpcd
 
@@ -892,3 +902,8 @@ on property:init.svc.bluetoothd=running
 #on property:init.svc.bluetoothd=stopped
 #    stop btwlancoex
 
+    #WeiChihChen let rmt_storage running
+    setprop ro.emmc 1
+
+on property:ro.emmc=1
+    start rmt_storage
