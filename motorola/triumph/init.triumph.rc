@@ -54,11 +54,9 @@ on boot
     chmod 0666 /dev/ss_vdec
     chmod 0666 /dev/ss_venc
 
-
     # Right now vendor lives on the same filesystem as system,
     # but someday that may change.
     symlink /system/vendor /vendor
-
 
     # create mountpoints
     mkdir /mnt 0775 root system
@@ -477,6 +475,7 @@ on boot
     chown compass system /dev/ltr502als_alsps
     chmod 0777 /dev/ltr502als_alsps
 
+
 ###################################################################################
 
 # Define TCP buffer sizes for various networks
@@ -504,57 +503,6 @@ on property:ro.data.large_tcp_window_size=true
 ##################################################################################
 
 
-on property:ro.emmc=1
-    start rmt_storage
-
-on property:persist.timed.enable=true
-    mkdir /data/time/ 0700
-    start time_daemon
-
-on property:persist.data.ds_fmc_app.mode=1
-    start ds_fmc_appd
-
-on property:init.svc.bootanim=stopped
-    start qcom-post-boot
-    start qcom-wifi
-
-on property:persist.ims.regmanager.mode=1
-    start ims_regmanager
-
-on property:ro.service.ckpd.enable=1
-    start ckpd
-
-on property:ro.product.device=msm7630_fusion
-    start usbhub_init
-
-# netmgr not supported on specific target
-on property:ro.use_data_netmgrd=false    
-    stop netmgrd
-
-on property:ro.secure=0
-    start console
-
-# adbd on at boot in emulator
-on property:ro.kernel.qemu=1
-    start adbd
-
-on property:persist.service.adb.enable=1
-    start adbd
-
-on property:persist.service.adb.enable=0
-    stop adbd
-
-
-on property:init.svc.wpa_supplicant=stopped
-    stop dhcpcd
-
-on property:init.svc.bluetoothd=running
-    write /sys/devices/virtual/bluetooth/hci0/idle_timeout 7000
-#    start btwlancoex
-
-#on property:init.svc.bluetoothd=stopped
-#    stop btwlancoex
-
 service dbus /system/bin/dbus-daemon --system --nofork
     socket dbus stream 660 bluetooth bluetooth
     user bluetooth
@@ -567,14 +515,6 @@ service bluetoothd /system/bin/bluetoothd -n
     # let bluetoothd drop uid to bluetooth with the right linux capabilities
     group bluetooth net_bt_admin misc
     disabled
-
-on property:crypto.driver.load=1
-     insmod /system/lib/modules/qce.ko
-     insmod /system/lib/modules/qcedev.ko
-
-on property:crypto.driver.load=0
-     exec /system/bin/rmmod qcedev.ko
-     exec /system/bin/rmmod qce.ko
 
 
 service ueventd /sbin/ueventd
@@ -618,16 +558,10 @@ service gpsone_daemon /system/bin/gpsone_daemon
 #    disabled
 #    oneshot
 
+
 service rmt_storage /system/bin/rmt_storage /dev/block/mmcblk0p14 /dev/block/mmcblk0p15
-    user root
-    disabled
-
-#Div2-SW2-BSP,JOE HSU,change EFS partition
-#service rmt_storage /system/bin/rmt_storage /dev/block/mmcblk0p10 /dev/block/#mmcblk0p11 /dev/block/mmcblk0p17
-#service rmt_storage /system/bin/rmt_storage /dev/block/mmcblk0p13 /dev/block/#mmcblk0p14 /dev/block/mmcblk0p15
-#    user root
-#    disabled
-
+   user root
+#  disabled
 
 service qmuxd /system/bin/qmuxd
     user radio
@@ -671,9 +605,6 @@ service hdmid /system/bin/hdmid
     socket hdmid stream 0660 system system 
     disabled
 
-on property:ro.hdmi.enable=true
-    start hdmid
-
 #service akmd /system/bin/akmd8975
 #    user compass
 #    group system
@@ -694,9 +625,6 @@ service thermald /system/bin/thermald
     user root
     group root
     disabled
-
-on property:persist.thermal.monitor=true
-    start thermald
 
 service geomagneticd /system/bin/geomagneticd
     user compass
@@ -901,4 +829,66 @@ service usbhub_init /system/bin/usbhub_init
    disabled
    oneshot
 
+on property:crypto.driver.load=1
+     insmod /system/lib/modules/qce.ko
+     insmod /system/lib/modules/qcedev.ko
+
+on property:crypto.driver.load=0
+     exec /system/bin/rmmod qcedev.ko
+     exec /system/bin/rmmod qce.ko
+
+    setprop persist.thermal.monitor true
+
+on property:persist.thermal.monitor=true
+    start thermald
+
+on property:ro.hdmi.enable=true
+    start hdmid
+
+on property:persist.timed.enable=true
+    mkdir /data/time/ 0700
+    start time_daemon
+
+on property:persist.data.ds_fmc_app.mode=1
+    start ds_fmc_appd
+
+on property:init.svc.bootanim=stopped
+    start qcom-post-boot
+    start qcom-wifi
+
+on property:persist.ims.regmanager.mode=1
+    start ims_regmanager
+
+on property:ro.service.ckpd.enable=1
+    start ckpd
+
+on property:ro.product.device=msm7630_fusion
+    start usbhub_init
+
+# netmgr not supported on specific target
+on property:ro.use_data_netmgrd=false    
+    stop netmgrd
+
+on property:ro.secure=0
+    start console
+
+# adbd on at boot in emulator
+on property:ro.kernel.qemu=1
+    start adbd
+
+on property:persist.service.adb.enable=1
+    start adbd
+
+on property:persist.service.adb.enable=0
+    stop adbd
+
+on property:init.svc.wpa_supplicant=stopped
+    stop dhcpcd
+
+on property:init.svc.bluetoothd=running
+    write /sys/devices/virtual/bluetooth/hci0/idle_timeout 7000
+#   start btwlancoex
+
+#on property:init.svc.bluetoothd=stopped
+#    stop btwlancoex
 
