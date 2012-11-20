@@ -87,6 +87,11 @@ ro.min.fling_velocity=8000
 #Dalvik
 dalvik.vm.heapstartsize=5m
 
+#GPS
+ro.ril.def.agps.mode=2
+ro.ril.def.agps.feature=1
+#persist.gps.qmienabled=true
+
 # system props for the MM modules
 #
 media.stagefright.enable-player=true

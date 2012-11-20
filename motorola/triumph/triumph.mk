@@ -59,8 +59,9 @@ PRODUCT_COPY_FILES += \
     frameworks/base/data/etc/android.hardware.sensor.accelerometer.xml:system/etc/permissions/android.hardware.sensor.accelerometer.xml \
     frameworks/base/data/etc/android.hardware.touchscreen.multitouch.xml:system/etc/permissions/android.hardware.touchscreen.multitouch.xml
 
-# init scripts
+# etc scripts
 PRODUCT_COPY_FILES += \
+    device/motorola/triumph/files/etc/loc_parameter.ini:system/etc/loc_parameter.ini \
     device/motorola/triumph/files/etc/init.qcom.bt.sh:system/etc/init.qcom.bt.sh \
     device/motorola/triumph/files/etc/init.qcom.coex.sh:system/etc/init.qcom.coex.sh\
     device/motorola/triumph/files/etc/init.qcom.bt.sh:system/etc/init.qcom.fm.sh \
