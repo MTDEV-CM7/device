@@ -68,11 +68,16 @@ BOARD_USE_QCOM_PMEM := true
 BOARD_USES_QCOM_GPS := true
 BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := triumph
 BOARD_VENDOR_QCOM_GPS_LOC_API_AMSS_VERSION := 50001
-BOARD_GPS_LIBRARIES := libloc_api-rpc-qc
-BOARD_GPS_LIBRARIES := libgps
 BOARD_VENDOR_QCOM_GPS_NEEDS_LNA := true
 BOARD_VENDOR_QCOM_GPS_HAS_BROKEN_XTRA := true
 BOARD_VENDOR_QCOM_AMSS_VERSION := 6225
+BOARD_GPS_LIBRARIES := libcommondefs\
+libloc-rpc \
+libloc_ext \
+libloc_api-rpc-qc \
+libgps \
+liboncrpc
+
 
 # Graphics
 BOARD_EGL_CFG := device/motorola/triumph/egl.cfg
