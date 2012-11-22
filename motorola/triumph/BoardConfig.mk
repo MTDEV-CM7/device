@@ -76,6 +76,7 @@ libloc-rpc \
 libloc_ext \
 libloc_api-rpc-qc \
 libgps \
+libqmi \
 liboncrpc
 
 
