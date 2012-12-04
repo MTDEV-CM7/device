@@ -168,6 +168,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/motorola/triumph/files/etc/init.d/99memory:system/etc/init.d/99memory
 
+#Bootsound
+PRODUCT_COPY_FILES += \
+    device/motorola/triumph/prebuilt/android_audio.mp3:system/media/android_audio.mp3
+
 # The OpenGL ES API level that is natively supported by this device.
 # This is a 16.16 fixed point number
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -208,6 +212,3 @@ PRODUCT_BRAND := Motorola
 PRODUCT_MODEL := WX435
 PRODUCT_MANUFACTURER := Motorola
 
-# Adding boot sound play. Must be placed in /system/media/android_audio.mp3
-
-    ro.config.play.bootsound=1
