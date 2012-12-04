@@ -102,4 +102,5 @@ media.stagefright.enable-http=true
 ro.bluetooth.remote.autoconnect=true
 ro.qualcomm.bluetooth.dun=true
 
+ro.config.play.bootsound=1
 
