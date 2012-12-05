@@ -170,7 +170,8 @@ PRODUCT_COPY_FILES += \
 
 #Bootsound
 PRODUCT_COPY_FILES += \
-    device/motorola/triumph/prebuilt/android_audio.mp3:system/media/android_audio.mp3
+    device/motorola/triumph/prebuilt/android_audio.mp3:system/media/android_audio.mp3 \
+    device/motorola/triumph/prebuilt/bootsound:system/bin/bootsound
 
 # The OpenGL ES API level that is natively supported by this device.
 # This is a 16.16 fixed point number
