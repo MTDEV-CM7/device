@@ -332,12 +332,12 @@ def WriteFullOTAPackage(input_zip, output_zip):
   if OPTIONS.wipe_user_data:
     script.FormatPartition("/data")
 
-  script.FormatPartition("/cache")
+  #script.FormatPartition("/cache")
   script.FormatPartition("/system")
   script.Mount("/system")
   script.UnpackPackageDir("system", "/system")
-  script.Mount("/data")
-  script.UnpackPackageDir("data", "/data")
+  #script.Mount("/data")
+  #script.UnpackPackageDir("data", "/data")
 
 
   symlinks = CopySystemFiles(input_zip, output_zip)
