@@ -61,6 +61,7 @@ PRODUCT_COPY_FILES += \
 
 # etc scripts
 PRODUCT_COPY_FILES += \
+    device/motorola/triumph/files/etc/pvplayer.cfg:system/etc/pvplayer.cfg \
     device/motorola/triumph/files/etc/loc_parameter.ini:system/etc/loc_parameter.ini \
     device/motorola/triumph/files/etc/init.qcom.bt.sh:system/etc/init.qcom.bt.sh \
     device/motorola/triumph/files/etc/init.qcom.coex.sh:system/etc/init.qcom.coex.sh\
