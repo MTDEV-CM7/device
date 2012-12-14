@@ -36,6 +36,7 @@ TARGET_BOARD_PLATFORM_GPU := qcom-adreno200
 TARGET_CPU_ABI := armeabi-v7a
 TARGET_CPU_ABI2 := armeabi
 TARGET_ARCH_VARIANT := armv7-a-neon
+TARGET_ARCH_VARIANT_CPU := cortex-a8
 ARCH_ARM_HAVE_TLS_REGISTER := true
 TARGET_USE_SCORPION_BIONIC_OPTIMIZATION := true
 ARCH_ARM_HAVE_NEON := true
@@ -51,6 +52,7 @@ ADDITIONAL_DEFAULT_PROPERTIES += ro.secure=0
 # Audio
 BOARD_USES_GENERIC_AUDIO := false
 TARGET_PROVIDES_LIBAUDIO := true
+BOARD_USES_ALSA_AUDIO := true
 
 # Bluetooth
 BOARD_HAVE_BLUETOOTH := true
@@ -59,6 +61,11 @@ BOARD_HAVE_BLUETOOTH_BCM := true
 # Camera
 BOARD_CAMERA_USE_GETBUFFERINFO := true
 BOARD_USE_CAF_LIBCAMERA := true
+BOARD_CAMERA_LIBRARIES := libcamera
+BOARD_CAMERA_LIBRARIES := liboemcamera
+BOARD_CAMERA_LIBRARIES := libmmjpeg
+BOARD_CAMERA_LIBRARIES := libmmipl.so
+
 
 # GPS Defines
 BOARD_USES_QCOM_HARDWARE := true
@@ -77,7 +84,7 @@ libloc_ext \
 libloc_api-rpc-qc \
 libgps \
 libqmi \
-liboncrpc
+librpc
 
 
 # Graphics
