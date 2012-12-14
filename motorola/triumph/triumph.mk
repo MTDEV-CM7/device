@@ -26,13 +26,20 @@ PRODUCT_PACKAGES += \
     copybit.msm7x30 \
     gralloc.msm7x30 \
     overlay.default \
-    libOmxCore \
-    libOmxVenc \
-    libOmxVdec
+    libOmxCore 
+
+
+#    libOmxVenc \
+#    libOmxVdec
 
 # Camera
 PRODUCT_PACKAGES += \
     camera.msm7x30
+
+# hw
+PRODUCT_PACKAGES += \
+    device/motorola/triumph/prebuilt/libstagefrighthw.so:obj/lib/libstagefrighthw.so \
+    device/motorola/triumph/prebuilt/libstagefrighthw.so:system/lib/libstagefrighthw.so 
 
 # Init files
 PRODUCT_COPY_FILES += \
