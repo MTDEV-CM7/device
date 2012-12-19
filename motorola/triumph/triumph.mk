@@ -36,10 +36,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     camera.msm7x30
 
-# hw
-PRODUCT_PACKAGES += \
-    device/motorola/triumph/prebuilt/libstagefrighthw.so:obj/lib/libstagefrighthw.so \
-    device/motorola/triumph/prebuilt/libstagefrighthw.so:system/lib/libstagefrighthw.so 
 
 # Init files
 PRODUCT_COPY_FILES += \
@@ -149,6 +145,7 @@ PRODUCT_COPY_FILES += \
 
 # Camera
 PRODUCT_COPY_FILES += \
+    device/motorola/triumph/prebuilt/libgemini.so:system/lib/libgemini.so \
     device/motorola/triumph/prebuilt/libmmjpeg.so:system/lib/libmmjpeg.so \
     device/motorola/triumph/prebuilt/libmmipl.so:system/lib/libmmipl.so \
     device/motorola/triumph/prebuilt/libcamera.so:system/lib/libcamera.so \
