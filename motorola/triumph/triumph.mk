@@ -25,10 +25,10 @@ PRODUCT_PACKAGES += \
     lights.triumph \
     copybit.msm7x30 \
     gralloc.msm7x30 \
-    overlay.default \
-    libOmxCore 
+    overlay.default 
+  
 
-
+#    libOmxCore \ 
 #    libOmxVenc \
 #    libOmxVdec
 
@@ -136,6 +136,13 @@ PRODUCT_COPY_FILES += \
 
 # GPS
 PRODUCT_COPY_FILES += \
+    device/motorola/triumph/prebuilt/gps/loc_api_app:system/bin/loc_api_app \
+    device/motorola/triumph/prebuilt/gps/libcommondefs.so:system/lib/libcommondefs.so \
+    device/motorola/triumph/prebuilt/gps/libcommondefs.so:obj/lib/libcommondefs.so \
+    device/motorola/triumph/prebuilt/gps/libloc_api-rpc-qc.so:system/lib/libloc_api-rpc-qc.so \
+    device/motorola/triumph/prebuilt/gps/libloc_ext.so:system/lib/libloc_ext.so \
+    device/motorola/triumph/prebuilt/gps/libloc-rpc.so:system/lib/libloc-rpc.so \
+    device/motorola/triumph/prebuilt/gps/libgps.so:system/lib/libgps.so \
     device/motorola/triumph/files/etc/gps.conf:system/etc/gps.conf \
     device/motorola/triumph/files/etc/SuplRootCert:system/etc/SuplRootCert 
 
@@ -145,12 +152,14 @@ PRODUCT_COPY_FILES += \
 
 # Camera
 PRODUCT_COPY_FILES += \
+    device/motorola/triumph/prebuilt/libdl.so:system/lib/libdl.so \
     device/motorola/triumph/prebuilt/libgemini.so:system/lib/libgemini.so \
-    device/motorola/triumph/prebuilt/libmmjpeg.so:system/lib/libmmjpeg.so \
-    device/motorola/triumph/prebuilt/libmmipl.so:system/lib/libmmipl.so \
-    device/motorola/triumph/prebuilt/libcamera.so:system/lib/libcamera.so \
-    device/motorola/triumph/prebuilt/libcamera.so:obj/lib/libcamera.so \
-    device/motorola/triumph/prebuilt/liboemcamera.so:system/lib/liboemcamera.so 
+    device/motorola/triumph/prebuilt/libgemini.so:obj/lib/libgemini.so \
+    device/motorola/triumph/prebuilt/Camera/libmmjpeg.so:system/lib/libmmjpeg.so \
+    device/motorola/triumph/prebuilt/Camera/libmmipl.so:system/lib/libmmipl.so \
+    device/motorola/triumph/prebuilt/Camera/libcamera.so:system/lib/libcamera.so \
+    device/motorola/triumph/prebuilt/Camera/libcamera.so:obj/lib/libcamera.so \
+    device/motorola/triumph/prebuilt/Camera/liboemcamera.so:system/lib/liboemcamera.so 
 
 
 # Sensors
