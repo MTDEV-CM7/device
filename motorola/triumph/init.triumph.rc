@@ -376,9 +376,12 @@ on boot
     mkdir /data/DxDrm/fuse
     chmod 555 /data/DxDrm
     mkdir /sdcard/download
-    
+
+#Sharp 2.3.5    
     chmod 0755 /system/xbin/hcitool
-    
+#Cherry
+#   chmod 4777 /system/xbin/hcitool
+  
     # set RLIMIT_NICE to allow priorities from 19 to -20
     setrlimit 13 40 40
 
@@ -437,7 +440,7 @@ on boot
     chmod 0777 /dev/bi041p
 
     # +++ AlbertYCFang 2011.04.18 for BTtools and TestMode +++
-    chmod 4777 /system/xbin/hcitool
+
 
     chmod 0444 /proc/pmlog
 
